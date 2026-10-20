@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data and model files (never commit these)
+data/
+*.laz
+*.las
+*.ckpt
+*.pt
+*.pth
+logs/
+outputs/
+wandb/
+
