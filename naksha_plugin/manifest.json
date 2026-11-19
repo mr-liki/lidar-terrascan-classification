@@ -1,0 +1,17 @@
+{
+  "name": "AI Model 3.0",
+  "version": "3.0.1",
+  "entry": "plugin.py",
+  "class": "Ai3Plugin",
+  "author": "NakshaTech Software Team",
+  "description": "AI model 3.0 LiDAR classification as an installable plugin. Classifies the open point cloud, or only the points inside selected fences, into the classes of the applied .ptc file (Ground, low / medium / high vegetation, buildings and, when the .ptc has them, power-line wires and poles). Optionally learns from already classified areas inside the fences: they are kept unchanged and the unfinished points follow their classes and height bands. Results are written straight into the native Vulkan view with undo; a classified copy of the source file is saved to AI3_Classified. The plugin includes its own Python runtime, dependencies, engine and model. Compatible existing runtimes are verified and reused; otherwise offline setup runs automatically after installation; no AI3 installation in the host software is required.",
+  "tags": [
+    "AI",
+    "Classification",
+    "LiDAR",
+    "Ground",
+    "Vegetation",
+    "Buildings",
+    "Power lines"
+  ]
+}

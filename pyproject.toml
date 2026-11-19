@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "naksha-ai3"
+dynamic = ["version"]
+description = "Naksha AI model 3.0 - standalone LiDAR point-cloud classification"
+requires-python = ">=3.10"
+# The package itself needs only these; the engine it starts needs the full AI3 runtime
+# (PDAL, torch 2.4, torch-geometric, numpy 1.26), installed separately or bundled by the installer.
+dependencies = ["numpy", "scipy", "laspy[lazrs]"]
+
+[project.scripts]
+naksha-ai3 = "naksha_ai3.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "naksha_ai3.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+naksha_ai3 = ["engine/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

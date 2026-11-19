@@ -230,3 +230,6 @@ logs/
 outputs/
 wandb/
 
+
+# AI Model 3.0: keep the bundled inference checkpoint
+!src/naksha_ai3/engine/models/*.ckpt
